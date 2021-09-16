@@ -1,0 +1,109 @@
+
+
+.header-container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 50vh;
+    .nav-links {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        ul {
+            list-style: none;
+        }
+        li {
+            padding: 5px 10px;
+        }
+        a {
+           color: #333;    
+        }
+    }   
+    .main2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        place-items: center;
+        background-color: #F16529;
+        h1 {
+            font-size: 32px;
+            color: white;
+        }
+    }
+    .main3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        place-items: center;
+        align-self: start;
+        h1{
+            font-size: 30px;
+            margin-top: 30px;
+            padding: 20px 10px;
+            color: #F16529;
+        }
+    } 
+}
+@media only screen and (min-width: 768px){
+    .header-container {
+        .nav-links{
+            a{
+                font-size: 18px;
+            }
+        }
+        .main2{
+            h1{
+                font-size: 42px;
+            }
+        }
+        .main3{
+            h1{
+                font-size: 42px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .header-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+
+        .nav-links{
+            top: 36%;
+            a{
+                font-size: 22px;
+                transition: all .4s ease-in;
+            }
+            a:hover {
+                color: #fdfdfd;
+                transform: scale(1.2);
+            }
+            li{
+                transition: transform .4s ease-in;
+            }
+            li:hover{
+                transform: scale(1.2);
+            }
+
+        }
+        .main2{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            h1{
+                font-size: 52px;
+                margin-bottom: 100px;
+                margin-left: 12rem;
+            }
+        }
+        .main3{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            align-self: center;
+            h1{
+                margin-top: 100px;
+                font-size: 48px;
+            }
+        }
+
+    }
+}
